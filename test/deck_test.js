@@ -6,7 +6,7 @@ var expect = require('chai').expect,
 
 describe('Deck object tests', function(){
   var deck;
-  var card;
+
 
   beforeEach(function(){
     deck = new Deck();
@@ -16,8 +16,6 @@ describe('Deck object tests', function(){
         deck.addCard(new Card(suit, i));
       }
     }
-    console.log(deck.countCards);
-
   });
 
   describe('constructor', function() {
@@ -25,9 +23,7 @@ describe('Deck object tests', function(){
       expect(deck).to.have.property('deck');
     });
     it('deck should have proper number of cards', function() {
-
       expect(deck.countCards()).to.equal(52);
-
     });
   });
 });

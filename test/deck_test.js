@@ -18,8 +18,8 @@ describe('Deck object tests', function(){
     it('deck should have card(s)', function() {
       expect(deck).to.have.property('deck');
     });
-    it('deck should have length 52', function() {
-      deck.should.have.length(52);
+    it('deck should have proper number of cards', function() {
+      expect(deck.countCards).to.equal(1);
     });
   });
 });

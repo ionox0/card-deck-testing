@@ -1,6 +1,7 @@
-var expect = require('chai').expect;
-Card = require('../lib/card').Card;
-Deck = require('../lib/deck').Deck;
+'use strict';
+
+var expect = require('chai').expect,
+  Card = require('../lib/card').Card;
 
 
 describe('Card object tests', function(){

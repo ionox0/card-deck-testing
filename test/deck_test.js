@@ -10,8 +10,14 @@ describe('Deck object tests', function(){
 
   beforeEach(function(){
     deck = new Deck();
-    card = new Card();
-    deck.addCard(card);
+    var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+    for (var suit in suits){
+      for (var i = 0; i < 13; i++){
+        deck.addCard(new Card(suit, i));
+      }
+    }
+    console.log(deck.countCards);
+
   });
 
   describe('constructor', function() {
@@ -19,7 +25,9 @@ describe('Deck object tests', function(){
       expect(deck).to.have.property('deck');
     });
     it('deck should have proper number of cards', function() {
-      expect(deck.countCards).to.equal(1);
+
+      expect(deck.countCards()).to.equal(52);
+
     });
   });
 });
